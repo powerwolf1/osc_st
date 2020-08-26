@@ -66,6 +66,7 @@ INSTALLED_APPS = [
     'treebeard',
     'easy_thumbnails',
     'django_tables2',
+    'paypal',
 ]
 
 SITE_ID = 1
@@ -164,7 +165,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DIGITAL_PRODUCT_FILES_ROOT = os.path.join(BASE_DIR, 'digital_products_files')
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 OSCAR_THUMBNAILER = 'oscar.core.thumbnails.EasyThumbnails'
 
@@ -197,3 +198,9 @@ OSCAR_ORDER_STATUS_PIPELINE = {
 OSCAR_DEFAULT_CURRENCY = 'EUR'
 
 OSCAR_MAX_ORDER_DOWNLOAD_ATTEMPTS = 5
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'zaporojan40@gmail.com'
+EMAIL_HOST_PASSWORD = '22907AAA'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
